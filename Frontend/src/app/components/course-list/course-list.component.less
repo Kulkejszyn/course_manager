@@ -1,0 +1,33 @@
+:host{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.container{
+	width: 50%;
+	margin-top: 10%;
+	justify-content: center;
+	align-items: center;
+}
+
+.courses-list{
+	height: 500px;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
+	.empty{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+		user-select: none;
+		font-size: 3rem;
+		opacity: 0.3;
+	}
+}
+

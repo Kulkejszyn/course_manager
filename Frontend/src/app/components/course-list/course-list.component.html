@@ -1,0 +1,36 @@
+<div class="container">
+	<mat-card>
+		<mat-card-title>
+			Courses
+		</mat-card-title>
+		<mat-card-content class="courses-list">
+			<div class='empty' *ngIf="courses?.length == 0 ">
+				No courses found
+			</div>
+			<mat-accordion>
+				<mat-expansion-panel hideToggle *ngFor="let course of courses">
+					<mat-expansion-panel-header>
+						<mat-panel-title>
+							{{course.name}}
+						</mat-panel-title>
+						<mat-panel-description>
+							{{course.description}}
+						</mat-panel-description>
+						<button mat-icon-button (click)="createOrEditCourse($event,course)">
+							<mat-icon>edit</mat-icon>
+						</button>
+						<button mat-icon-button (click)="deleteCourse($event,course)">
+							<mat-icon>delete</mat-icon>
+						</button>
+					</mat-expansion-panel-header>
+					<div *ngFor="let topic of course.topics">
+						{{topic.topicNumber}}. {{topic.topic}}
+					</div>
+				</mat-expansion-panel>
+			</mat-accordion>
+		</mat-card-content>
+		<mat-card-actions>
+			<button mat-raised-button [color]="'primary'" (click)="createOrEditCourse($event)">Add course</button>
+		</mat-card-actions>
+	</mat-card>
+</div>

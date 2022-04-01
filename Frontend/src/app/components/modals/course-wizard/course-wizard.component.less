@@ -1,0 +1,38 @@
+.column {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.topic-list {
+	height: 300px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	.empty{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+		user-select: none;
+		font-size: 3rem;
+		opacity: 0.3;
+	}
+
+	.topic {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+
+		.mat-list-item-content{
+			width: 100%;
+		}
+	}
+}
+
+.topic-form{
+	display: flex;
+	gap: 1em;
+}
